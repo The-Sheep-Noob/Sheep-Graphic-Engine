@@ -163,6 +163,7 @@
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="indexBuffer.cpp" />
     <ClCompile Include="object.cpp" />
+    <ClCompile Include="render.cpp" />
     <ClCompile Include="shader.cpp" />
     <ClCompile Include="shapes.cpp" />
     <ClCompile Include="Source.cpp" />
@@ -194,6 +195,7 @@
     <ClInclude Include="abstraction.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="indexBuffer.h" />
+    <ClInclude Include="settings.h" />
     <ClInclude Include="object.h" />
     <ClInclude Include="shapes.h" />
     <ClInclude Include="shader.h" />

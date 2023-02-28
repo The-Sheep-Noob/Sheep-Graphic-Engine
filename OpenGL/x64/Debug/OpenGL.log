@@ -1,6 +1,10 @@
-﻿  Source.cpp
-C:\Users\Yohan\source\repos\SheepGraphicEngine\OpenGL\Source.cpp(13,22): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-C:\Users\Yohan\source\repos\SheepGraphicEngine\OpenGL\Source.cpp(19,38): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-C:\Users\Yohan\source\repos\SheepGraphicEngine\OpenGL\Source.cpp(19,31): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-C:\Users\Yohan\source\repos\SheepGraphicEngine\OpenGL\Source.cpp(32,28): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+﻿  shapes.cpp
+C:\Users\Yohan\source\repos\SheepGraphicEngine\OpenGL\shapes.cpp(78,25): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Yohan\source\repos\SheepGraphicEngine\OpenGL\shapes.cpp(78,21): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
+C:\Users\Yohan\source\repos\SheepGraphicEngine\OpenGL\shapes.cpp(79,25): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Yohan\source\repos\SheepGraphicEngine\OpenGL\shapes.cpp(79,21): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
+C:\Users\Yohan\source\repos\SheepGraphicEngine\OpenGL\shapes.cpp(80,25): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Yohan\source\repos\SheepGraphicEngine\OpenGL\shapes.cpp(80,21): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
+C:\Users\Yohan\source\repos\SheepGraphicEngine\OpenGL\shapes.cpp(81,25): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Yohan\source\repos\SheepGraphicEngine\OpenGL\shapes.cpp(81,21): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
   OpenGL.vcxproj -> C:\Users\Yohan\source\repos\SheepGraphicEngine\x64\Debug\OpenGL.exe

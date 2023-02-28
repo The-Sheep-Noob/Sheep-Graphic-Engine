@@ -38,27 +38,12 @@ int main() {
     testing2.setPositions(350);
     testing2.Texture = "Lightning.png";
 
-    bool ok = false;
-    int count = 1;
     while (!glfwWindowShouldClose(window))
     {
         glClear(GL_COLOR_BUFFER_BIT);
         
         testing2.Y_rotate += 1;
-        //testing2.X_rotate += 1;
-        //testing2.Z_rotate+= 1;
 
-
-
-       /* if (ok) {
-            testing2.Texture = "Lightning.png";
-        }
-        else {
-           testing2.removeTexture();
-        }
-        ok = !ok;*/
-        std::cout << "b" << count << ": " << ok << std::endl;
-        count++;
         Shapes::renderShapes();
 
         glfwSwapBuffers(window);

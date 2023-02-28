@@ -2,9 +2,10 @@
 #include <iostream>
 #include <vector>
 #include "settings.h"
+#include <algorithm>
 
 
-Square::Square() :Z_rotate(0) , Y_rotate(0) , X_rotate(0), proj(glm::ortho(0.0f, width, 0.0f, height, -1.0f, 1.0f)), Z_index(0), R(0), G(0), B(0), A(255), Size(1), Texture(""), X(0), Y(0) {
+Square::Square() :Z_rotate(0) , Y_rotate(0) , X_rotate(0), proj(glm::ortho(0.0f, width, 0.0f, height, -1.0f, 1.0f)), R(0), G(0), B(0), A(255), Size(1), Texture(""), X(0), Y(0) {
 
     Shapes::sub_objects.push_back(this);
     float sqr_ver_buf[] =
@@ -35,7 +36,6 @@ Square::Square() :Z_rotate(0) , Y_rotate(0) , X_rotate(0), proj(glm::ortho(0.0f,
 
     prev_X = X;
     prev_Y = Y;
-    prev_Z_index = Z_index;
     prev_Size = Size;
     prev_Texture = Texture;
 }
@@ -91,22 +91,16 @@ void Square::updateVertexBuffer()
     setDynamicVertexBuffer(sqr_ver_buf, sizeof(sqr_ver_buf));
     prev_X = X;
     prev_Y = Y;
-    prev_Z_index = Z_index;
     prev_Size = Size;
 }
 
-int count = 1;
 
 void Square::draw() 
 {
-    std::cout << count <<": ";
-    count++;
-    std::cout << (Texture != "" ? Texture : "no texture") << std::endl;
 
     if (
         prev_X != X ||
         prev_Y != Y ||
-        prev_Z_index != Z_index ||
         prev_Size != Size
     ) updateVertexBuffer();
     if (prev_Texture != Texture) updateTexture(); 
@@ -192,8 +186,16 @@ void Square::setRotations(int X, int Y, int Z)
 
 
 
+bool compareObjectZ_index(Object* O1, Object* O2)
+{
+    return (O1->Z_index < O2->Z_index);
+}
+
+
 void Shapes::renderShapes() 
 {
+   
+    std::sort(Shapes::sub_objects.begin(), Shapes::sub_objects.end() , compareObjectZ_index);
     for (Object* obj : Shapes::sub_objects) {
         obj->draw(); // draw object
     }

@@ -10,7 +10,7 @@ namespace Shapes {
 	extern void main();
 }
 // extern keyword = tell compiler that the var is defined somewhere else
-class Square : Object {
+class Square : public Object {
 private :
 	bool texture_changed;
 	bool color_changed;
@@ -43,7 +43,6 @@ public:
 	int A;
 	int X;
 	int Y;
-	int Z_index;
 	int X_rotate;
 	int Y_rotate;
 	int Z_rotate;

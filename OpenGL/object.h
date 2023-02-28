@@ -36,6 +36,7 @@ public:
 	void setUniform2f(std::string name, float value1, float value2);
 	void setUniform4f(std::string name, float value1, float value2, float value3, float value4);
 	int getUniformID(std::string& name);
+	int Z_index;
 	void virtual draw();
 };
 

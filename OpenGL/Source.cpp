@@ -1,7 +1,7 @@
 #include <GLEW/glew.h>
 #include <GLFW/glfw3.h>
 #include<iostream>
-#include "shapes.h"
+#include "program.h"
 #include "settings.h"
 
 
@@ -27,31 +27,22 @@ int main() {
         std::cout << "wth bro !" << std::endl;
     }
 
-    Square testing;
-    testing.setColors(100);
-    testing.Size = (height > width ? height : width);
-    testing.setPositions(350);
-
-    Square testing2;
-    testing2.A = 0;
-    testing2.Size = 300;
-    testing2.setPositions(350);
-    testing2.Texture = "Lightning.png";
+    Program main_program;
+    main_program.onStartup();
 
     while (!glfwWindowShouldClose(window))
     {
         glClear(GL_COLOR_BUFFER_BIT);
         
-        testing2.Y_rotate += 1;
-
-        Shapes::renderShapes();
+        main_program.onUpdate();
+        main_program.renderShapes();
 
         glfwSwapBuffers(window);
         glfwPollEvents();
 
     }
 
-
+    main_program.clearObjects();
     glfwTerminate();
 
     return 0;

@@ -107,6 +107,9 @@
     <None Include="V_square.shader">
       <Filter>Shader Files</Filter>
     </None>
+    <None Include="F_circle.shader">
+      <Filter>Shader Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vertexBuffer.h">

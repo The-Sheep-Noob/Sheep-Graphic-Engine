@@ -12,11 +12,10 @@ void main() {
 	vec4 texColor = texture(c_texture, texCoords);
 	if (has_texture)
 	{
-		if (texColor.w == 0)
+		if (texColor.w < 0.1)
 			color = u_color;
 		else
-			texColor *= t_color;// *= vec4(1, 0, 0, 0.5);//t_color;
-			color = texColor;
+			color = texColor * t_color;
 	}
 	else 
 	{

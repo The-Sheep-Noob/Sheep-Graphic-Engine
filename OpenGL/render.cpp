@@ -5,6 +5,9 @@
 Square* testing;
 Square* lightning;
 Rectangle* a_square;
+Circle* circle;
+Circle* circle2;
+
 
 void Program::onStartup()
 {
@@ -15,8 +18,8 @@ void Program::onStartup()
     testing->setPositions(350);
 
     lightning = new Square();
-    lightning->A = 0;
     lightning->Size = 300;
+    lightning->A = 0;
     lightning->setPositions(350);
     lightning->Texture = "Lightning.png";
     lightning->setColorsTexture(0, 200, 200, 255);
@@ -27,6 +30,16 @@ void Program::onStartup()
     a_square->setColors(255, 255, 255,100);
     a_square->Transform_from_middle = false;
 
+    circle = new Circle();
+    circle->Size = 400;
+    circle->Transform_from_middle = false;
+    circle->setPositions(height - circle->Size,width - circle->Size);
+    circle->setColors(0, 0, 200 , 100);
+
+    circle2 = new Circle();
+    circle2->Size = 700;
+    circle2->setPositions(350 , 350);
+    circle2->setColors(0, 0, 200, 100);
 }
 
 void Program::onUpdate()
